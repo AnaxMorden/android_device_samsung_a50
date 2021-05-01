@@ -16,17 +16,16 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/a50/device.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+#$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := a50
