@@ -21,7 +21,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 endif
 
 # Inherit common device configuration
-$(call inherit-product, device/samsung/universal9610-common/universal9610-common.mk)
+$(call inherit-product, kernel/samsung/universal9610-common/universal9610-common.mk)
 
 # Boot animation
 TARGET_BOOTANIMATION_HALF_RES := true
