@@ -21,7 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a50/device.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
+# Inherit halium.mk
+$(call inherit-product, vendor/halium/config/halium.mk)
+
 
 # Inherit some common Lineage stuff.
 #$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
